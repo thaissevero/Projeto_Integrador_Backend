@@ -19,8 +19,6 @@ public class Categoria {
     @NotBlank
     private String tipo;
 
-
-
     public Long getId() {
         return id;
     }
