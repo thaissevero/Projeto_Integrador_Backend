@@ -1,3 +1,7 @@
+/*
+  Feito por @thaissevero 
+ */
+
 package com.generation.ods11.model;
 
 import java.time.LocalDateTime;
@@ -38,6 +42,8 @@ public class Postagem {
 	
 	@NotNull (message = "Se possivel, coloque audio de leitura da postagem, assim ajudará quem precisa, vamos fazer o mundo mais acessivel!")
 	private String audio;
+	
+	private Categoria categoria;
 	
 	public Long getId() {
 		return id;
@@ -93,5 +99,13 @@ public class Postagem {
 
 	public void setAudio(String audio) {
 		this.audio = audio;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 }
