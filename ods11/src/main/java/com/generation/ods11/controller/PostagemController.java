@@ -9,6 +9,7 @@ import java.util.Optional;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,11 +25,19 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.ods11.model.Postagem;
+import com.generation.ods11.repository.CategoriaRepository;
+import com.generation.ods11.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/postagens")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
+	
+	@Autowired
+	private PostagemRepository postagemRepository;
+	
+	@Autowired
+	private CategoriaRepository categoriaRepository;
 
 	
 	// Procurar por todas as postagens
@@ -48,23 +57,23 @@ public class PostagemController {
 	// Procurar pelo titulo da postagem
 	@GetMapping("/titulo/{titulo}")
 	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo){
-		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo))
+		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 	// Procurar pelo autor da postagemm
 	@GetMapping("/autor/{autor}")
 	public ResponseEntity<List<Postagem>> getByAutor(@PathVariable String autor){
-		return ResponseEntity.ok(postagemRepository.findAllByAutorContainingIgnoreCase(autor))
+		return ResponseEntity.ok(postagemRepository.findAllByAutorContainingIgnoreCase(autor));
 	}
 	
 	// Inserir uma postagem pelo id
 	@PostMapping
 	public ResponseEntity<Postagem> post (@Valid @RequestBody Postagem postagem){
-		if (categoriaRepository.existsById(postagem.getCategoria().getID()))
+		if (categoriaRepository.existsById(postagem.getCategoria().getId()))
 			return ResponseEntity.status(HttpStatus.CREATED)
 					.body(postagemRepository.save(postagem));
 		
-		return ReponseEntity.status(HttpStatus.BAD_REQUEST).build();	
+		return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();	
 	}
 	
 	//Alterar uma postagem pelo id
@@ -82,7 +91,7 @@ public class PostagemController {
 
 	//Deletar uma postagem pelo id
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("/{id)")
+	@DeleteMapping("/{id}")
 	public void delete (@PathVariable Long id) {
 		Optional<Postagem> postagem = postagemRepository.findById(id);
 				
