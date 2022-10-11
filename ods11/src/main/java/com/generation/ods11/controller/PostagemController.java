@@ -29,7 +29,7 @@ import com.generation.ods11.repository.CategoriaRepository;
 import com.generation.ods11.repository.PostagemRepository;
 
 @RestController
-@RequestMapping("/produtos")
+@RequestMapping("/postagens")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class PostagemController {
 	
@@ -91,7 +91,7 @@ public class PostagemController {
 
 	//Deletar uma postagem pelo id
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@DeleteMapping("/{id)")
+	@DeleteMapping("/{id}")
 	public void delete (@PathVariable Long id) {
 		Optional<Postagem> postagem = postagemRepository.findById(id);
 				
