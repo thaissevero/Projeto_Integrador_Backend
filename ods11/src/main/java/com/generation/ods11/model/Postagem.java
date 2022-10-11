@@ -60,6 +60,11 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
 	private Categoria categoria;
 	
+	//Relacionamento acrecentado por @marirebecca
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;	
+
 	public Long getId() {
 		return id;
 	}
@@ -140,5 +145,12 @@ public class Postagem {
 		this.sugestao = sugestao;
 	}
 	 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	
 }
