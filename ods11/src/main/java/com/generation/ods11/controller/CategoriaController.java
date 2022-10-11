@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.ods11.model.Categoria;
+import com.generation.ods11.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/categoria")
