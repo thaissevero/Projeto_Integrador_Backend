@@ -20,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.ods11.model.Usuario;
+import com.generation.ods11.model.UsuarioLogin;
+import com.generation.ods11.repository.UsuarioRepository;
+import com.generation.ods11.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
