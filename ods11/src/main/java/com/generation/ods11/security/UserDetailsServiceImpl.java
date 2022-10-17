@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 import com.generation.ods11.model.Usuario;
+import com.generation.ods11.repository.UsuarioRepository;
 
 public class UserDetailsServiceImpl implements UserDetailsService{
 
