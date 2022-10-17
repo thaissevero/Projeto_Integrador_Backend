@@ -10,10 +10,15 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table (name = "tb_postagens")
@@ -23,28 +28,43 @@ public class Postagem {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@NotBlank (message = "Não pode deixar a postagem sem Titulo!!!")
-	@Size (min = 15, max = 200, message = "Deve conter no minimo 15 e no máximo 200 caracteres")
+	@NotBlank (message = "Titulo é obrigatório")
+	@Size (min = 5, max = 100)
 	private String titulo;
 	
-	@NotBlank (message = "Não pode deixar a postagem sem o Subtitulo!!!")
-	@Size (min = 15, max = 1200, message = "Deve conter no minimo 15 e no máximo 1200 caracteres")
+	@NotBlank (message = "Subtítulo é obrigatório")
+	@Size (min = 5, max = 100)
 	private String subtitulo;
+	
+	@NotBlank 
+	@Size (max = 5000)
+	private String texto;
 
-	@NotNull (message = "Imagem é ideal para que sua mensagem seja transmitida com mais clareza.")
+	@NotNull 
 	private String imagem;
 	
-	@NotBlank (message = "O preenchimento do nome do/da Autore é obrigatório!")
+	@NotBlank 
 	private String autor;
-		
-	@NotNull (message = "A data e o horário da onde você se encontra é essencial para evitar confusão entre as notícias.")
+	
+	@UpdateTimestamp
+	@NotNull 
 	private LocalDateTime data;
 	
-	@NotNull (message = "Se possivel, coloque audio de leitura da postagem, assim ajudará quem precisa, vamos fazer o mundo mais acessivel!")
+	@NotNull 
 	private String audio;
 	
+	private String sugestao;
+	
+	//Relacionamento criado por @AnaPaulaNunes
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
 	private Categoria categoria;
 	
+	//Relacionamento acrecentado por @marirebecca
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+	private Usuario usuario;	
+
 	public Long getId() {
 		return id;
 	}
@@ -108,4 +128,29 @@ public class Postagem {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public String getTexto() {
+		return texto;
+	}
+
+	public void setTexto(String texto) {
+		this.texto = texto;
+	}
+
+	public String getSugestao() {
+		return sugestao;
+	}
+
+	public void setSugestao(String sugestao) {
+		this.sugestao = sugestao;
+	}
+	 
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+	
 }
