@@ -11,6 +11,6 @@ import com.generation.ods11.model.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
-	public Optional<Usuario> findByEmail(String email);
+	
 	public Optional<Usuario> findByUsuario(String usuario);
 }
