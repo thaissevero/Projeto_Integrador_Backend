@@ -46,8 +46,7 @@ public class Postagem {
 	@NotBlank 
 	private String autor;
 	
-	@UpdateTimestamp
-	@NotNull 
+	@UpdateTimestamp 
 	private LocalDateTime data;
 	
 	@NotNull 

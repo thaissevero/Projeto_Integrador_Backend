@@ -28,18 +28,18 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotNull(message = "O atributo User Name é Obrigatório!")
-	@Email(message = "O atributo User Name deve ser um email ou user válidos!")
-	private String username;
+	@NotNull(message = "O atributo Nome é Obrigatório!")
+	private String userName;
+	
+	@Email(message = "Insira um e-mail válido")	
+	private String usuario;
 
 	@NotBlank(message = "O atributo Senha é Obrigatório!")
 	@Size(min = 8, message = "A Senha deve ter no mínimo 8 caracteres")
 	private String senha;
 
 	private String fotoUser;
-	
-	private String email;
-	
+		
 	private String tipoUser;
 	
 	@OneToMany(mappedBy = "usuario", cascade = CascadeType.REMOVE)
@@ -47,78 +47,61 @@ public class Usuario {
 	private List<Postagem> postagem;
 	
 	
-	public Usuario() {
-		super();
+	public String getUserName() {
+		return userName;
 	}
 
-
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 	public Long getId() {
 		return id;
 	}
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
-	public String getUsername() {
-		return username;
+	public String getUsuario() {
+		return usuario;
 	}
 
-
-	public void setUsername(String username) {
-		this.username = username;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
-
 
 	public String getSenha() {
 		return senha;
 	}
 
-
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-
 
 	public String getFotoUser() {
 		return fotoUser;
 	}
 
-
 	public void setFotoUser(String fotoUser) {
 		this.fotoUser = fotoUser;
 	}
-
-
-	public String getEmail() {
-		return email;
-	}
-
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
 
 	public String getTipoUser() {
 		return tipoUser;
 	}
 
-
 	public void setTipoUser(String tipoUser) {
 		this.tipoUser = tipoUser;
 	}
-
 
 	public List<Postagem> getPostagem() {
 		return postagem;
 	}
 
-
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
+	
+	
 	
 }
