@@ -5,7 +5,7 @@ package com.generation.ods11.model;
 public class UsuarioLogin {
 	
 	private Long id;
-	private String userName;
+	private String nome;
 	private String usuario;
 	private String senha;
 	private String fotoUser;
@@ -18,11 +18,12 @@ public class UsuarioLogin {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	
+	public String getNome() {
+		return nome;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public String getUsuario() {
 		return usuario;

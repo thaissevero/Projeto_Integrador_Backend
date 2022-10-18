@@ -44,7 +44,7 @@ public class UsuarioService {
 		if (usuario.isPresent()) {
 			if (compararSenhas(usuarioLogin.get().getSenha(), usuario.get().getSenha())) {
 				usuarioLogin.get().setId(usuario.get().getId());
-				usuarioLogin.get().setUserName(usuario.get().getUserName());
+				usuarioLogin.get().setNome(usuario.get().getNome());
 				usuarioLogin.get().setFotoUser(usuario.get().getFotoUser());
 				usuarioLogin.get().setTipoUser(usuario.get().getTipoUser());
 				usuarioLogin.get()

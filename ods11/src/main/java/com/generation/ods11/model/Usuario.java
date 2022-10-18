@@ -29,7 +29,7 @@ public class Usuario {
 	private Long id;
 
 	@NotNull(message = "O atributo Nome é Obrigatório!")
-	private String userName;
+	private String nome;
 	
 	@Email(message = "Insira um e-mail válido")	
 	private String usuario;
@@ -47,13 +47,14 @@ public class Usuario {
 	private List<Postagem> postagem;
 	
 	
-	public String getUserName() {
-		return userName;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
+
 	public Long getId() {
 		return id;
 	}
