@@ -1,6 +1,6 @@
 //Feito por @marirebecca
 
-package com.generation.ods11.security;
+package com.generation.pontoverde.security;
 
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,8 +8,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.generation.ods11.model.Usuario;
-import com.generation.ods11.repository.UsuarioRepository;
+
+import com.generation.pontoverde.model.Usuario;
+import com.generation.pontoverde.repository.UsuarioRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

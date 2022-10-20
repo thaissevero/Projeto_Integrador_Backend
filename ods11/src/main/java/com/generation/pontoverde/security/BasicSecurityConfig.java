@@ -1,6 +1,6 @@
 //Feito por @marirebecca
 
-package com.generation.ods11.security;
+package com.generation.pontoverde.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

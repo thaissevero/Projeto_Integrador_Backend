@@ -1,4 +1,4 @@
-package com.generation.ods11.controller;
+package com.generation.pontoverde.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.generation.ods11.model.Usuario;
-import com.generation.ods11.model.UsuarioLogin;
-import com.generation.ods11.repository.UsuarioRepository;
-import com.generation.ods11.service.UsuarioService;
+import com.generation.pontoverde.model.Usuario;
+import com.generation.pontoverde.model.UsuarioLogin;
+import com.generation.pontoverde.repository.UsuarioRepository;
+import com.generation.pontoverde.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")

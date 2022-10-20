@@ -2,7 +2,7 @@
   Feito por @thaissevero 
  */
 
-package com.generation.ods11.model;
+package com.generation.pontoverde.model;
 
 import java.time.LocalDateTime;
 

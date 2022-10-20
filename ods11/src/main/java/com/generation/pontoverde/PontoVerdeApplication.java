@@ -1,13 +1,13 @@
-package com.generation.ods11;
+package com.generation.pontoverde;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Ods11Application {
+public class PontoVerdeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Ods11Application.class, args);
+		SpringApplication.run(PontoVerdeApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.generation.ods11.repository;
+package com.generation.pontoverde.repository;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.generation.ods11.model.Categoria;
+import com.generation.pontoverde.model.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {

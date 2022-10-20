@@ -1,6 +1,6 @@
 //Feito por @marirebecca
 
-package com.generation.ods11.model;
+package com.generation.pontoverde.model;
 
 import java.util.List;
 
@@ -18,6 +18,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.v3.oas.annotations.media.Schema;
+
 
 
 @Entity
@@ -31,6 +33,8 @@ public class Usuario {
 	@NotNull(message = "O atributo Nome é Obrigatório!")
 	private String nome;
 	
+	@Schema(example = "email@email.com.br")
+	@NotNull(message = "O atributo Usuário é Obrigatório!")
 	@Email(message = "Insira um e-mail válido")	
 	private String usuario;
 

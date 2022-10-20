@@ -1,7 +1,7 @@
 
 // Feito por @lettycodes
 
-package com.generation.ods11.controller;
+package com.generation.pontoverde.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.generation.ods11.model.Categoria;
-import com.generation.ods11.repository.CategoriaRepository;
+import com.generation.pontoverde.model.Categoria;
+import com.generation.pontoverde.repository.CategoriaRepository;
 
 @RestController
 @RequestMapping("/categoria")

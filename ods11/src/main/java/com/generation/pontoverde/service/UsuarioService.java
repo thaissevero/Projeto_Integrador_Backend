@@ -1,6 +1,6 @@
 // Feito por @lettycodes
 
-package com.generation.ods11.service;
+package com.generation.pontoverde.service;
 
 import java.nio.charset.Charset;
 import java.util.Optional;
@@ -10,9 +10,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import com.generation.ods11.model.Usuario;
-import com.generation.ods11.model.UsuarioLogin;
-import com.generation.ods11.repository.UsuarioRepository;
+
+import com.generation.pontoverde.model.Usuario;
+import com.generation.pontoverde.model.UsuarioLogin;
+import com.generation.pontoverde.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {

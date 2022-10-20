@@ -2,7 +2,7 @@
  Feito por @flrvia and @marirebecca.
  */
 
-package com.generation.ods11.controller;
+package com.generation.pontoverde.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,9 +24,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.generation.ods11.model.Postagem;
-import com.generation.ods11.repository.CategoriaRepository;
-import com.generation.ods11.repository.PostagemRepository;
+import com.generation.pontoverde.model.Postagem;
+import com.generation.pontoverde.repository.CategoriaRepository;
+import com.generation.pontoverde.repository.PostagemRepository;
 
 @RestController
 @RequestMapping("/postagens")

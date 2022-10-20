@@ -1,12 +1,13 @@
 //Feito por @marirebecca
 
-package com.generation.ods11.security;
+package com.generation.pontoverde.security;
 
 import java.util.Collection;
 import java.util.List;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import com.generation.ods11.model.Usuario;
+
+import com.generation.pontoverde.model.Usuario;
 
 public class UserDetailsImpl implements UserDetails {
 	private static final long serialVersionUID = 1L;

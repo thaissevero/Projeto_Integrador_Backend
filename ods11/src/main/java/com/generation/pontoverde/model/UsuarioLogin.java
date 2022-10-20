@@ -1,6 +1,6 @@
 //Feito por @lidianeangelo
 
-package com.generation.ods11.model;
+package com.generation.pontoverde.model;
 
 public class UsuarioLogin {
 	
