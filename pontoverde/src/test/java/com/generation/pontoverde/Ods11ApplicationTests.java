@@ -1,10 +1,10 @@
-package com.generation.ods11;
+package com.generation.pontoverde;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Ods11ApplicationTests {
+class PontoVerdeApplicationTests {
 
 	@Test
 	void contextLoads() {
